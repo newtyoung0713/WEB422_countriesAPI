@@ -66,6 +66,7 @@ function loadCountriesData(page, perPage, searchName = null) {
         // error (no countries available)
         const tableBody = document.querySelector('#countriesTable tbody');
         tableBody.innerHTML = `<tr><td colspan="13"><strong>Error loading data: ${err}</strong></td></tr>`;
+        return res.status(500).json({ message: "Internal Server Error", err: err.message });
     });
 }
 // Display country details in a modal

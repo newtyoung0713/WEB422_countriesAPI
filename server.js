@@ -1,6 +1,6 @@
 // server.js
 /********************************************************************************
-*  WEB422 – Assignment 1
+*  WEB422 – Assignment 2
 * 
 *  I declare that this assignment is my own work in accordance with Seneca's
 *  Academic Integrity Policy:
@@ -11,7 +11,7 @@
 *  Student ID: 160443222
 *  Date: Sep-13-2024
 *
-*  Published URL: https://web-422-countries-api-a1.vercel.app/
+*  Published URL: https://web-422-countries-api.vercel.app/
 *
 ********************************************************************************/
 

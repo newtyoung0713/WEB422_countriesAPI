@@ -61,12 +61,12 @@ function loadCountriesData(page, perPage, searchName = null) {
           tableBody.appendChild(row);
         }
       }
-      document.getElementById('current-page').textContent = `Page: ${page}`;
+      document.getElementById('current-page').textContent = `${page}`;
     }).catch(err => {
         // error (no countries available)
         const tableBody = document.querySelector('#countriesTable tbody');
         tableBody.innerHTML = `<tr><td colspan="13"><strong>Error loading data: ${err}</strong></td></tr>`;
-        return res.status(500).json({ message: "Internal Server Error", err: err.message });
+        console.error("Error loading data", err);
     });
 }
 // Display country details in a modal
@@ -86,4 +86,4 @@ function showCountryDetails(country) {
   const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
   modal.show();
 }
-loadCountriesData(page, perPage, searchName);
+loadCountriesData(page, perPage);

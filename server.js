@@ -1,6 +1,6 @@
 // server.js
 /********************************************************************************
-*  WEB422 – Assignment 2
+*  WEB422 – Assignment 1
 * 
 *  I declare that this assignment is my own work in accordance with Seneca's
 *  Academic Integrity Policy:
@@ -27,10 +27,7 @@ const HTTP_PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/api/countries', async (req, res) => {
   try {

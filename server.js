@@ -18,6 +18,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 const CountriesDB = require("./modules/countriesDB.js");
 const db = new CountriesDB();
@@ -28,7 +29,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  return res.status(201).json({ message: "API Listening" });
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.post('/api/countries', async (req, res) => {

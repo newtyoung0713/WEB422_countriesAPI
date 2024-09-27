@@ -3,8 +3,7 @@ const perPage = 10;
 let searchName = null;
 
 function loadCountriesData() {
-  // let url = `https://web-422-countries-api-a1.vercel.app/api/countries?page=${page}&perPage=${perPage}`;
-  let url = `http://localhost:5000/api/countries?page=${page}&perPage=${perPage}`;
+  let url = `https://web-422-countries-api-a1.vercel.app/api/countries?page=${page}&perPage=${perPage}`;
   if (searchName) url += `&name=${searchName}`;
   
   const tableBody = document.querySelector('#countriesTable tbody');
